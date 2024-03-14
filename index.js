@@ -55,13 +55,14 @@ var mouse = {
 }
 
 var maxRadius = 40;
-var minRadius = 2;
+var minRadius = 3;
 
 var colorArray = ['#240A34','#891652','#EABE6C','#FFEDD8'];
 
-window.addEventListener('mouseover', function(event){
+window.addEventListener('mousemove', function(event){
     mouse.x = event.x;
     mouse.y = event.y;
+    // console.log(event);
 })
 
 function Circle(x, y, dx, dy, radius){
@@ -107,7 +108,7 @@ function Circle(x, y, dx, dy, radius){
 }
 
 var circleArray = [];
-for(var i = 0 ; i<100; i++){
+for(var i = 0 ; i<2000; i++){
     var x = Math.random()*(innerWidth - 2*radius) + radius;
     var y = Math.random()*(innerWidth - 2*radius) + radius;
     var dx = Math.random()*0.5;
